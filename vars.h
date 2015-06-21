@@ -40,8 +40,12 @@ uint8_t
 ;
 
 uint16_t
-  iLcdUpdateTimeout = 500,
-  iLcdUpdate2Timeout = 1000,
+  iLcdUpdateTimeout = 2000,
+  iLcdUpdatePhrase = 0,
+  iLcdUpdate2Timeout = 500,
+  iLcdUpdate2Phrase = 0,
+  
+  iLedUpdateTimeout = 17,
   
   iSpellTestTimeout = 10000,
   iSpellTestEventTimeout[2] = {1000, 1000},
@@ -55,6 +59,11 @@ uint16_t
     {3, 5, 6, 7},
     //Gopher hunt
     {5, 10, 17, 25}
+  },
+  
+  iLcdUpdateTimeoutDefaults[] = {
+    1000,
+    2000
   }
 ;
 
@@ -62,6 +71,9 @@ elapsedMillis
   mGameState,
   mLcdUpdate,
   mLcdUpdate2,
+  mLedUpdate,
   mSpellTest,
   mSpellTestEvent[2]
 ;
+
+
